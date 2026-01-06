@@ -2,7 +2,7 @@
 
 Uma aplicação web moderna e intuitiva para **gestão financeira pessoal e familiar**, utilizando **HTML, CSS e JavaScript puro no front-end**, com **back-end em Java (Spring Boot)** e **MySQL** para persistência de dados.
 
-![Java](https://img.shields.io/badge/Java-17-orange.svg)
+![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)
 ![MySQL](https://img.shields.io/badge/MySQL-8.x-00758f.svg)
 ![Node](https://img.shields.io/badge/Node.js-18.x-339933.svg)
@@ -125,7 +125,7 @@ O projeto foi pensado para uso **pessoal ou familiar**, mas com arquitetura pró
 - **Charts.js / Recharts (opcional)**
 
 ### Back-end
-- **Java 17**
+- **Java 21**
 - **Spring Boot**
 - **Spring Web**
 - **Spring Data JPA**
