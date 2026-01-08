@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Padrão</title>
     <link rel="stylesheet" href="../../cssPadrao/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
- 
   </head>
   <body>
     <div class="informacoes">
@@ -19,34 +19,44 @@
       <div class="container">
         <div class="navbar">
           <ul>
-            <li onclick="IrParaPagina('PlanejamentoEVisao')" id="li_Planejamento">
-              <i class="bi bi-columns-gap"></i> 
+            <li
+              onclick="IrParaPagina('PlanejamentoEVisao')"
+              id="li_Planejamento"
+            >
+              <i class="bi bi-columns-gap"></i>
               <span>Planejamento e Visão</span>
             </li>
             <li onclick="IrParaPagina('NovoGasto')" id="li_NovoGasto">
-              <i class="bi bi-plus-circle"></i> 
+              <i class="bi bi-plus-circle"></i>
               <span>Novo Gasto</span>
             </li>
             <li onclick="IrParaPagina('NovaReceita')" id="li_NovaReceita">
-              <i class="bi bi-graph-up-arrow"></i> 
+              <i class="bi bi-graph-up-arrow"></i>
               <span>Nova Receita</span>
             </li>
             <li onclick="IrParaPagina('Investimentos')" id="li_Investimentos">
-              <i class="bi bi-bar-chart-line"></i> 
+              <i class="bi bi-bar-chart-line"></i>
               <span>Investimentos</span>
             </li>
             <li onclick="IrParaPagina('Categorias')" id="li_Categorias">
-              <i class="bi bi-tag"></i> 
+              <i class="bi bi-tag"></i>
               <span>Categorias</span>
             </li>
             <li onclick="IrParaPagina('Configuracoes')" id="li_Configuracoes">
-              <i class="bi bi-gear"></i> 
+              <i class="bi bi-gear"></i>
               <span>Configurações</span>
             </li>
           </ul>
         </div>
 
-        <div class="conteudo"></div>
+        <div class="conteudo" id="conteudo">
+      
+        </div>
+
+          <div class="modal" id="modal">
+          
+          </div>
+       
       </div>
     </div>
     <script src="js/script.js"></script>

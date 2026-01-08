@@ -1,7 +1,13 @@
-body {
+/* Categorias — estilos escopados para consistência */
+.conteudo {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
-h1 {
+.conteudo h1 {
   color: #1a73e8;
+  margin: 0 0 12px 0;
+}
+.conteudo p {
+  color: #374151;
 }

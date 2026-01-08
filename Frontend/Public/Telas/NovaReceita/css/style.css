@@ -1,7 +1,88 @@
-body {
+/* NovaReceita — estilo escopado em .conteudo */
+.conteudo .formNovaReceita {
+  width: 100%;
+  max-width: 680px;
+  margin: 24px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 18px rgba(2, 6, 23, 0.06);
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  margin: 20px;
 }
-h1 {
-  color: #1a73e8;
+
+.conteudo .formNovaReceita h2 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  color: #111827;
+}
+
+.conteudo .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.conteudo .campo label {
+  font-weight: 700;
+  font-size: 13px;
+  color: #374151;
+}
+.conteudo .campo span {
+  color: #d02b2b;
+}
+
+.conteudo .campo input {
+  height: 44px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e9;
+  background: #fafafa;
+}
+
+.conteudo .tipo-receita .options {
+  display: grid;
+  gap: 10px;
+}
+.conteudo .tipo-receita .opt {
+  display: flex;
+}
+.conteudo .tipo-receita input[type="radio"] {
+  display: none;
+}
+.conteudo .tipo-receita label {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid #e6e6e9;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+.conteudo .tipo-receita label .desc {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+.conteudo .tipo-receita input[type="radio"]:checked + label {
+  border-color: #1f2937;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02) inset;
+  background: #fff;
+}
+
+.conteudo .btnAdicionar {
+  background: #05050d;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .conteudo .tipo-receita .options {
+    grid-template-columns: 1fr 1fr;
+  }
 }

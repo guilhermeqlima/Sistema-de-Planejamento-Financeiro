@@ -29,3 +29,39 @@ function IrParaPagina(pagina) {
       break;
   }
 }
+
+
+// FUNÇÃO PARA CARREGAR MODAL DE ERRO OU SUCESSO
+function carregarModal(tipo, mensagem) {
+  const modal = document.getElementById('modal');
+
+  
+  modal.classList.remove('sucesso', 'erro', 'ativo');
+
+
+  modal.innerHTML = `
+    <div class="modal-conteudo">
+      <i class="bi ${tipo === 'sucesso' ? 'bi-check-circle' : 'bi-x-circle'}"></i>
+      <span>${mensagem}</span>
+    </div>
+  `;
+
+
+  if (tipo === 'sucesso') {
+    modal.classList.add('sucesso');
+  } else {
+    modal.classList.add('erro');
+  }
+
+  
+  void modal.offsetWidth;
+
+
+  modal.classList.add('ativo');
+
+
+  setTimeout(() => {
+    modal.classList.remove('ativo');
+  }, 3000);
+}
+
