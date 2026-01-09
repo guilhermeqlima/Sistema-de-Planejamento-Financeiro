@@ -101,24 +101,48 @@ body {
 
 .modal {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 24px;
+  right: 24px;
 
-  width: 300px;
-  height: 100px;
+  width: 320px;
+  min-height: 90px;
 
-  background-color: orange;
-  border-radius: 12px;
+  border-radius: 14px;
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+
   z-index: 9999;
 
-  
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
 
-  transition: 
-    opacity 0.3s ease,
-    transform 0.3s ease;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.modal-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+.modal i {
+  font-size: 32px;
+}
+
+
+.modal span {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
 
@@ -129,7 +153,24 @@ body {
 }
 
 
-@media (max-width: 768px) {
+
+
+.modal.sucesso {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(46, 204, 113, 0.35);
+}
+
+
+.modal.erro {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(231, 76, 60, 0.35);
+}
+
+
+
+@media (max-width: 900px) {
   body{
     overflow: auto;
   }

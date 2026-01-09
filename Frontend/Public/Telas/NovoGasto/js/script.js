@@ -138,7 +138,7 @@ function AdicionarGasto() {
   const parcelado = document.getElementById('checkParcelado').checked;
 
   if (!descricao || !valor || !categoria || !data || !metodo) {
-    alert('Preencha todos os campos obrigatórios.');
+  carregarModal("erro", "Por favor, preencha todos os campos obrigatórios.");
     return;
   }
 
@@ -158,6 +158,6 @@ function AdicionarGasto() {
   }
 
   console.log('Gasto cadastrado:', gasto);
-  alert('Gasto adicionado com sucesso!');
+  carregarModal("sucesso", "Gasto adicionado com sucesso!");
 }
 

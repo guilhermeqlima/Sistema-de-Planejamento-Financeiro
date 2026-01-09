@@ -53,15 +53,12 @@ function carregarModal(tipo, mensagem) {
     modal.classList.add('erro');
   }
 
-  
-  void modal.offsetWidth;
-
 
   modal.classList.add('ativo');
 
 
   setTimeout(() => {
     modal.classList.remove('ativo');
-  }, 3000);
+  }, 4000);
 }
 
