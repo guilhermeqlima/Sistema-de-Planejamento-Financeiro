@@ -1,7 +1,207 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+.topo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 620px;
 }
-h1 {
-  color: #1a73e8;
+.topo h2{
+  font-size: 18px;
+  color: black;
+}
+.topo button{
+  background: black;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius:10px;
+  cursor: pointer;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 700px;
+}
+
+
+
+.cardCategoria {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.cardCategoria:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.corCategoria {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 50%;
+}
+
+.cardCategoria h3 {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+
+.botoesCategoria {
+  display: flex;
+  gap: 6px;
+}
+
+.botoesCategoria button {
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.botoesCategoria button:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.cardCategoria .botoesCategoria .editar {
+  background-color: #4CAF50;
+  color: white;
+  
+}
+.cardCategoria .botoesCategoria .excluir {
+  background-color: #f44336;
+  color: white;
+  
+}
+
+.modalConteudoNecessario .topo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.modalConteudoNecessario .topo button{
+  background: none;
+  width: 50px;
+  border: none;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+.modalConteudoNecessario h2{
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: black;
+}
+
+.modalConteudoNecessario .campo{
+  width: 100%;
+  display: flex;
+ 
+  margin-bottom: 14px;
+  flex-direction: column;
+}
+
+.modalConteudoNecessario .campo input{
+    width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e9;
+  background-color: #fafafa;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.modalConteudoNecessario .campo input::placeholder {
+  color: #999;
+}
+.modalConteudoNecessario .cores{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.modalConteudoNecessario .cores .opcoesCores{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(30px, 1fr));
+  width: 100%;
+  gap: 10px;
+}
+.modalConteudoNecessario .cores .opcoesCores .cor{
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.modalConteudoNecessario .cores .opcoesCores .cor {
+  border: 2px solid transparent;
+}
+
+.modalConteudoNecessario .cores .opcoesCores .cor:hover {
+  border-color: gray;
+}
+
+.modalConteudoNecessario .cores .opcoesCores .cor.selecionada {
+  border-color: black;
+}
+
+.modalConteudoNecessario .cores .opcoesCores .cor:hover{
+  border-color: gray;
+}
+.modalConteudoNecessario .cores  .corEscolhidaAtual{
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: gray;
+}
+.modalConteudoNecessario button{
+  background: black;
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 8px 16px;
+  border-radius:10px;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .categorias {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
+@media (max-width: 450px) {
+  .categorias {
+    grid-template-columns: 1fr;
+  }
 }

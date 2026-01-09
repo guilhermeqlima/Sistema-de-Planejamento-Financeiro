@@ -29,3 +29,49 @@ function IrParaPagina(pagina) {
       break;
   }
 }
+
+
+// FUNÇÃO PARA CARREGAR MODAL DE ERRO OU SUCESSO
+function carregarModalSucessoErro(tipo, mensagem) {
+  const modal = document.getElementById('modalSucessoErro');
+
+  
+  modal.classList.remove('sucesso', 'erro', 'ativo');
+
+
+  modal.innerHTML = `
+    <div class="modalSucessoErro-conteudo">
+      <i class="bi ${tipo === 'sucesso' ? 'bi-check-circle' : 'bi-x-circle'}"></i>
+      <span>${mensagem}</span>
+    </div>
+  `;
+
+
+  if (tipo === 'sucesso') {
+    modal.classList.add('sucesso');
+  } else {
+    modal.classList.add('erro');
+  }
+
+
+  modal.classList.add('ativo');
+
+
+  setTimeout(() => {
+    modal.classList.remove('ativo');
+  }, 4000);
+}
+
+
+//FUNÇÃO PARA ABRIR E FECHAR MODAL DE ALGUM CONTEUDO, COMO NOVA CATEGORIA, EDITAR CATEGORIA, ETC.
+function abrirModalConteudo(conteudoHTML) {
+  const overlay = document.getElementById("overlayModal");
+  const modalConteudo = document.querySelector(".modalConteudoNecessario");
+  modalConteudo.innerHTML = conteudoHTML;
+  overlay.classList.add("ativo");
+}
+
+function fecharModalConteudo() {
+  const overlay = document.getElementById("overlayModal");
+  overlay.classList.remove("ativo");
+}

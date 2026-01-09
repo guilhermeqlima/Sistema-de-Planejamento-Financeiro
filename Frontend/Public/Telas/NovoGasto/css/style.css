@@ -1,7 +1,176 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  max-width: 620px;
+  width: 100%;
+
+  border: 1px solid #e6e6e9;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
 }
-h1 {
-  color: #1a73e8;
+
+.card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+
+.card .campo {
+  width: 100%;
+  display: flex;
+ 
+  margin-bottom: 14px;
+  flex-direction: column;
+}
+
+.card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+}
+
+.card span {
+  color: #e53935;
+}
+
+.card input,
+.card select,
+.campoParcelamento input {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+  border: 1px solid #e6e6e9;
+  background-color: #fafafa;
+
+  font-size: 14px;
+  color: #333;
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.card input::placeholder {
+  color: #9ca3af;
+}
+
+.card input:focus,
+.card select:focus {
+  border-color: #1a73e8;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.12);
+}
+
+
+.parcelamento {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.perguntaParcelamento {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  height: 52px;
+  padding: 0 14px;
+
+  background-color: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e6e6e9;
+}
+
+.informacoesParcelamento {
+  display: none;
+  gap: 14px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.campoParcelamento {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card button {
+  width: 100%;
+  height: 46px;
+
+  border-radius: 12px;
+  margin-top: 14px;
+  border: none;
+
+  background: black;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+}
+
+.card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(58, 60, 61, 0.35);
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background-color: #d1d5db;
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  top: 3px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.switch input:checked + .slider {
+  background-color: #1a73e8;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(22px);
 }
