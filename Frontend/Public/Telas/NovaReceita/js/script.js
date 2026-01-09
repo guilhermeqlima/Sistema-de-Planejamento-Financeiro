@@ -102,10 +102,9 @@ function adicionarNovaReceita() {
     tipoReceita = "Variável";
   }
   if (!descricao || isNaN(valor) || !fonte || !data || !tipoReceita) {
-   carregarModal( "erro", "Por favor, preencha todos os campos obrigatórios.");
+   carregarModalSucessoErro( "erro", "Por favor, preencha todos os campos obrigatórios.");
     return;
   }
- 
-  carregarModal( "sucesso", "Receita adicionada com sucesso!");
 
+  carregarModalSucessoErro( "sucesso", "Receita adicionada com sucesso!");
 }

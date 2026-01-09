@@ -42,19 +42,14 @@
 .card select,
 .campoParcelamento input {
   width: 100%;
-
   padding: 10px 12px;
-
   border-radius: 8px;
   border: 1px solid #e6e6e9;
   background-color: #fafafa;
-
   font-size: 14px;
   color: #333;
   outline: none;
-
   box-sizing: border-box;
-
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease,
@@ -134,14 +129,11 @@
 .card button {
   width: 100%;
   height: 46px;
-
   border-radius: 12px;
   margin-top: 14px;
   border: none;
-
   background: black;
   color: #ffffff;
-
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;

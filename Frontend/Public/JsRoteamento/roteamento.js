@@ -32,8 +32,8 @@ function IrParaPagina(pagina) {
 
 
 // FUNÇÃO PARA CARREGAR MODAL DE ERRO OU SUCESSO
-function carregarModal(tipo, mensagem) {
-  const modal = document.getElementById('modal');
+function carregarModalSucessoErro(tipo, mensagem) {
+  const modal = document.getElementById('modalSucessoErro');
 
   
   modal.classList.remove('sucesso', 'erro', 'ativo');
