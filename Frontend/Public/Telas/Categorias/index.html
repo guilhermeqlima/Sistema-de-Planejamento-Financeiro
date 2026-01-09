@@ -49,15 +49,22 @@
           </ul>
         </div>
 
-        <div class="conteudo" id="conteudo">
+        <div class="conteudo" id="conteudo"></div>
 
-      
+        <div class="modalSucessoErro" id="modalSucessoErro"></div>
+
+        <div
+          class="overlayModal"
+          id="overlayModal"
+          onclick="fecharModalConteudo()"
+        >
+          <div
+            class="modalConteudoNecessario"
+            onclick="event.stopPropagation()"
+          >
+         
         </div>
 
-          <div class="modal" id="modalSucessoErro">
-          
-          </div>
-       
       </div>
     </div>
     <script src="js/script.js"></script>

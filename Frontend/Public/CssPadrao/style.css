@@ -99,7 +99,7 @@ body {
   align-items: center;
 }
 
-.modal {
+.modalSucessoErro {
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -127,26 +127,27 @@ body {
 }
 
 
-.modal-conteudo {
+.modalSucessoErro-conteudo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
 }
 
 
-.modal i {
+.modalSucessoErro i {
   font-size: 32px;
 }
 
 
-.modal span {
+.modalSucessoErro span {
   font-size: 15px;
   line-height: 1.4;
   font-weight: 500;
 }
 
 
-.modal.ativo {
+.modalSucessoErro.ativo {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -155,19 +156,59 @@ body {
 
 
 
-.modal.sucesso {
+.modalSucessoErro.sucesso {
   background: linear-gradient(135deg, #2ecc71, #27ae60);
   color: #ffffff;
   box-shadow: 0 12px 30px rgba(46, 204, 113, 0.35);
 }
 
 
-.modal.erro {
+.modalSucessoErro.erro {
   background: linear-gradient(135deg, #e74c3c, #c0392b);
   color: #ffffff;
   box-shadow: 0 12px 30px rgba(231, 76, 60, 0.35);
 }
 
+.modalConteudoNecessario {
+  background-color: #ffffff;
+  width: 320px;
+  min-height: 90px;
+
+  border-radius: 14px;
+  padding: 16px 18px;
+
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.overlayModal {
+  position: fixed;
+  inset: 0; 
+  background-color: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9998;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlayModal.ativo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlayModal.ativo .modalConteudoNecessario {
+  transform: scale(1);
+}
 
 
 @media (max-width: 900px) {

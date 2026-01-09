@@ -95,16 +95,19 @@ function adicionarNovaReceita() {
   const valor = parseFloat(document.getElementById("valor").value);
   const fonte = document.getElementById("fonte").value;
   const data = document.getElementById("data").value;
-  const tipoReceita = null;
-  if (dispesaFixa) {
+  var  tipoReceita= null;
+  if (dispesaFixa == true) {
     tipoReceita = "Fixa";
   } else if (dispesaVariavel) {
-    tipoReceita = "Variável";
+    tipoReceita = "Variavel";
   }
-  if (!descricao || isNaN(valor) || !fonte || !data || !tipoReceita) {
+
+    if (!descricao || isNaN(valor) || !fonte || !data || !tipoReceita) {
    carregarModalSucessoErro( "erro", "Por favor, preencha todos os campos obrigatórios.");
     return;
   }
+  
+
 
   carregarModalSucessoErro( "sucesso", "Receita adicionada com sucesso!");
 }
